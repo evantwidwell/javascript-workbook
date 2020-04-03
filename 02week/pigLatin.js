@@ -9,10 +9,16 @@ const rl = readline.createInterface({
 
 
 const pigLatin = (word)  => {
-
+  // const firstVowel = (string);{
+    console.log( word.indexOf('a' || 'e'));
+    
+  // }
+  
+  let first = word.indexOf('a');
+  
   // Your code here
 
-}
+};
 
 
 const getPrompt = () => {
