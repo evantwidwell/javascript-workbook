@@ -9,16 +9,41 @@ const rl = readline.createInterface({
 
 
 const pigLatin = (word)  => {
-  // const firstVowel = (string);{
-    console.log( word.indexOf('a' || 'e'));
-    
-  // }
   
-  let first = word.indexOf('a');
-  
-  // Your code here
+    const wordtrim = word.trim().toLowerCase();
+    // console.log(wordtrim);
+    const vowels = ['a' , 'e' , 'i' , 'o', 'u'];
+    // console.log(vowels);
+    // console.log(wordtrim.length)
+    for (let i=0; i < wordtrim.length; i++){
+       for (let j=0; j < vowels.length; j++) {
+          if (wordtrim.charAt(i) == vowels[j]){
+            if (i == 0){
+              console.log(wordtrim + "yay");
+            }
+            if (i != 0){
+              let wordSlice=wordtrim.slice(0, i);
+              let wordSplit=wordtrim.substring(i, 30)
+              // console.log(wordSplit)
+              console.log(wordSplit + wordSlice +"ay");
+            }
+            return i;
+            // const firstVowel = i;
+            // console.log(firstVowel);
+         }
+       }
+  }
 
-};
+  console.log(firstVowel);
+  
+    
+  //  }
+  
+  // let first = wordtrim.indexOf('a');
+  
+  
+
+}
 
 
 const getPrompt = () => {
