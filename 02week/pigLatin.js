@@ -23,7 +23,7 @@ const pigLatin = (word)  => {
             }
             if (i != 0){
               let wordSlice=wordtrim.slice(0, i);
-              let wordSplit=wordtrim.substring(i, 30)
+              let wordSplit=wordtrim.substring(i, wordtrim.length)
               // console.log(wordSplit)
               console.log(wordSplit + wordSlice +"ay");
             }
@@ -34,7 +34,7 @@ const pigLatin = (word)  => {
        }
   }
 
-  console.log(firstVowel);
+  // console.log(firstVowel);
   
     
   //  }
