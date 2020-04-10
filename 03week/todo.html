@@ -6,22 +6,17 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>To do List</h1>
+  <h1>To #1 to do List</h1>
+  <div id='ulWrapper'></div>
   <ul>
-    <li>
-      <span>Wash Dishes</span>
-      <button> delete</button>
-    </li>
-    <li>
-      <span>Wash Dishes</span>
-      <button> delete</button>
-    </li>
-    <li>
-      <span id="done">Wash Dishes</span>
-      <button> delete</button>
-    </li>
   </ul>
-  <input type="text"></input><button> add </button>
+</div>
+  <input type="text" id="inputText"></input><button id="addButton"> add </button>
 </body>
+<style>
+  .done{
+    text-decoration: line-through;
+  }
+</style>
 <script src="todo.js"></script>
 </html>
