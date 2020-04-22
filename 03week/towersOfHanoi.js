@@ -35,6 +35,7 @@ function movePiece(first, second) {
 }
 
 function isLegal(first, second) {
+  
   let original = stacks[first][stacks[first].length - 1 ]
   let moveTo = stacks[second][stacks[second].length - 1 ]
   
@@ -92,12 +93,21 @@ function getPrompt() {
     rl.question('end stack: ', (endStack) => {
       let first = startStack.toLowerCase().trim()
       let second = endStack.toLowerCase().trim()
-      if ((first === undefined) || (second === undefined)){
+      console.log(first)
+      if ((first.length < 1) || (second.length < 1)){
         console.log("You did not put in two inputs")
-        getPrompt();
-      }
+        getPrompt()
+      } 
+       else if(((first == 'a') || (first == 'b') || (first == 'c')) && ((second == 'a') || (second == 'b') || (second == 'c'))){
+        towersOfHanoi(first, second)
       
-      towersOfHanoi(first, second)
+      }
+       else {
+        
+        console.log("You did not put in 2 appropriate inputs, try again")
+        getPrompt()
+      }
+
     });
   });
 }
