@@ -38,7 +38,7 @@ function generateHint(guess) {
   let correctLetterLocations = 0
   let correctLetters = 0
   let hint = 0
-  console.log(solution.length)
+  // console.log(solution.length)
 
   for (let i = 0; i < solution.length; i++){
       if (guessArray[i] == solutionArray[i]){
@@ -54,7 +54,7 @@ function generateHint(guess) {
         
       }
   }
-    console.log("The secret solution is " + solution)
+    // console.log("The secret solution is " + solution)
     // console.log(correctLetterLocations.toString())
     // console.log
     hint = (guess + " : " + correctLetterLocations + " - " + correctLetters)
@@ -75,7 +75,7 @@ function mastermind(guess) {
     console.log("You got it!")
   } else if (board.length === 10){ 
 
-   console.log("You took to many guesses, the answer was " + solution;)
+   console.log("You took to many guesses, the answer was " + solution)
     
   } else{
     console.log("Guess again")
