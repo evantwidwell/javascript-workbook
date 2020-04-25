@@ -57,9 +57,11 @@ function generateHint(guess) {
     // console.log("The secret solution is " + solution)
     // console.log(correctLetterLocations.toString())
     // console.log
+
     hint = (guess + " : " + correctLetterLocations + " - " + correctLetters)
-    
     board.push(hint);
+    return ` ${guess} : ${correctLetterLocations} - ${correctLetters}`
+    
     
     // console.log(board)
 
