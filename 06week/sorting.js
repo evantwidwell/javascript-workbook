@@ -10,21 +10,29 @@ const stringsToNumbs = strNums.map((numbers) => {
 
 console.log(stringsToNumbs)
 // With the same numbers, find the sum of the even values
-const sumEvens = strNums.filter((number) => {
+const sumEvens = stringsToNumbs.filter((number) => {
   return number % 2  == 0;
 });
 
 console.log(sumEvens);
 
 // Find the index of the first value when added to it's index = 512 (#ATX!!)
-const initialValue = 0
-const atxIdx = strNums2.reduce((numbers, ) => {
-  numbers += 
-  return numbers
+// const initialValue = 0
+function atxIdx(){
+  let sum = 0
+  for (let i =0; i <stringsToNumbs.length; i++){
+    sum = sum + stringsToNumbs[i]
+    // console.log(sum)
+    if((sum + i) >= 512){
+      // console.log(i)
+      return i
+    }
+  }
   
-});
-console.log(atxIdx)
-// console.log(`index: ${atxIdx}, value: ${nums[atxIdx]}`);
+}  
+  
+console.log(atxIdx())
+console.log(`index: ${atxIdx()}, value: ${stringsToNumbs[atxIdx()]}`);
 
 const weather = [
   { id: 5743823523151872,
@@ -94,10 +102,30 @@ const weather = [
 ]
 
 //using a higher order function, create an array of the unique 'weather_state_name' values of the weather array. Your function should return the following array ['Light Cloud', 'Heavy Cloud', 'Showers']
-// const weatherStates = 
-// console.log(weatherStates)
+
+
+
+let weatherStates= [];
+
+weather.forEach(function(obj){
+  console.log(obj.weather_state_name)
+    if(weatherStates.includes(obj.weather_state_name)){
+        // do nothing
+    } else {
+        weatherStates.push(obj.weather_state_name);
+    }
+})
+
+
+console.log(weatherStates)
 
 //find the id of the object in weather that has a min_temp of 15.915
 
-// const idealTemp =
-// console.log(idealTemp)
+let  idealTemp = 0
+
+weather.forEach(function (obj){
+  if(obj.min_temp == 15.915){
+    idealTemp = obj.id
+  }
+});
+console.log(idealTemp)
